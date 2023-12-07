@@ -1747,14 +1747,6 @@ case "ping": case "speed": {
                  m.reply (`Bot active for *${runtime(process._uptime())}_*`) 
  } 
  break;
-  case 'hey': case 'hi': case 'Hi':
-       
-        
-  let txxt = `👋🏻 Hi *${pushname}*, i am  𝐂𝐑𝐎𝐖𝐍\nA whatsapp bot created by: 𝐈𝐭𝐬_𝐒𝐢𝐫𝐦™𝕏\n\n I don't have time for chit-chat Darling. Use command from *${prefix}help* list if you want me to do anything.`
-
-  client.sendMessage(m.chat, { image: { url: `https://i.imgur.com/TOXZmiy.jpeg` }, caption: txxt, gifPlayback: true }, { quoted: m });
-   }
-    break;
 
 case "alive": { 
   

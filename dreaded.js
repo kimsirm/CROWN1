@@ -1750,7 +1750,9 @@ client.sendMessage(m.chat, { image: { url: `https://i.imgur.com/1rqCELH.jpeg` },
       }
 break;
 
-case "runtime": { 
+
+       
+       case "runtime": { 
                  m.reply (`Bot active for *${runtime(process._uptime())}_*`) 
  } 
  break;

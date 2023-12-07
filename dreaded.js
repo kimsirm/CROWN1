@@ -1742,12 +1742,13 @@ case "ping": case "speed": {
          m.reply (`*𝐋𝐚𝐭𝐞𝐧𝐜𝐲: ${dreadedspeed.toFixed(4)} _𝐦𝐬_*`); 
          } 
  break; 
+        
 
-case 'hey': case 'hi': case 'hello':
+case 'hey': case 'hi': case 'hello':{
 
- client.sendMessage(m.chat, { image: { url: `https://i.imgur.com/1rqCELH.jpeg` }, caption: `👋🏻 Hi *${pushname}*, i am  𝐂𝐑𝐎𝐖𝐍\nA whatsapp bot created by: 𝐈𝐭𝐬_𝐒𝐢𝐫𝐦™𝕏\n\n I don't have time for chit-chat Darling. Use command from *${prefix}help* list if you want me to do anything.`}, { quoted: m });
+client.sendMessage(m.chat, { image: { url: `https://i.imgur.com/1rqCELH.jpeg` }, caption: `👋🏻 Hi *${pushname}*, i am  𝐂𝐑𝐎𝐖𝐍\nA whatsapp bot created by: 𝐈𝐭𝐬_𝐒𝐢𝐫𝐦™𝕏\n\n I don't have time for chit-chat Darling. Use command from *${prefix}help* list if you want me to do anything.`}); 
       }
-   break;
+break;
    
 
 

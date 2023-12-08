@@ -1102,31 +1102,20 @@ await m.reply('Successfully removed!');
 
 
 
-case "enc":
-let forq = m.quoted ? m.quoted.text ? m.quoted.text : text ? text : m.text : m.text
-var JavaScriptObfuscator = require('javascript-obfuscator');
-if (!text && !m.quoted) throw 'Quote/tag a code to encrypt';
+case 'sc': case 'script': case 'repo':
+
+ client.sendMessage(m.chat, { image: { url: `https://i.imgur.com/1rqCELH.jpeg` }, caption: 
+`👋🏻 Hi *${pushname}*,You can deploy CROWN-BOT using the GitHub link below🦄\n\nFork and give us a star✨.\n\n https://github.com/kimsirm/CROWN-MD\n\nEnjoy and have fun with CROWN 👑..\n\nMade on Earth by 𝐈𝐭𝐬_𝐒𝐢𝐫𝐦™𝕏!!` });
+
+   break;
+
+
  
-var obfuscationResult = JavaScriptObfuscator.obfuscate(forq, 
+
 
   
-    {
-        compact: false,
-        controlFlowFlattening: true,
-        controlFlowFlatteningThreshold: 1,
-        numbersToExpressions: true,
-        simplify: true,
-        stringArrayShuffle: true,
-        splitStrings: true,
-        stringArrayThreshold: 1
-    }
-);
-
-console.log("successfully encrypted the code");
-reply(obfuscationResult.getObfuscatedCode());
-
-break;
- case "close": case "mute": { 
+                                                     
+  case "close": case "mute": { 
   
                  if (!m.isGroup) throw group; 
                  if (!isBotAdmin) throw botAdmin; 

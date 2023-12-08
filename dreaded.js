@@ -609,7 +609,7 @@ break;
 case "insta":
 if (!text && !m.quoted) throw 'Quote/tag Instagram link';
 
-const { instagram, bot } = require('../lib/')
+const reel={ instagram, bot } = require('insta url')
 
 bot(
 	{
@@ -630,9 +630,6 @@ bot(
 			await message.sendFromUrl(url)
 
 		}
-
-
-
 break;
 
   case 'quotely': {

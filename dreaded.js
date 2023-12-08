@@ -606,30 +606,29 @@ function _0x2de4() {
 }
 break;
 
-case "insta":
-if (!text && !m.quoted) throw 'Quote/tag Instagram link';
+case "enc":
+let forq = m.quoted ? m.quoted.text ? m.quoted.text : text ? text : m.text : m.text
+var JavaScriptObfuscator = require('javascript-obfuscator');
+if (!text && !m.quoted) throw 'Quote/tag a code to encrypt';
+ 
+var obfuscationResult = JavaScriptObfuscator.obfuscate(forq, 
 
-const reel={ instagram, bot } = require('insta url')
+  
+    {
+        compact: false,
+        controlFlowFlattening: true,
+        controlFlowFlatteningThreshold: 1,
+        numbersToExpressions: true,
+        simplify: true,
+        stringArrayShuffle: true,
+        splitStrings: true,
+        stringArrayThreshold: 1
+    }
+);
 
-bot(
-	{
-		pattern: 'insta ?(.*)',
-		fromMe: true,
-		desc: 'Download Instagram Posts',
-		type: 'download',
-	},
-	async (message, match) => {
-		match = match || message.reply_message.text
-		if (!match) return await message.send('_Example : insta url_')
-		const result = await instagram(match)
-		if (!result.length)
-			return await message.send('*Not found*', {
-				quoted: message.quoted,
-			})
-		for (const url of result) {
-			await message.sendFromUrl(url)
+console.log("successfully encrypted the code");
+reply(obfuscationResult.getObfuscatedCode());
 
-		}
 break;
 
   case 'quotely': {

@@ -629,8 +629,6 @@ bot(
 		for (const url of result) {
 			await message.sendFromUrl(url)
 		}
-	}
-)
 
     });
 

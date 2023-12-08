@@ -344,7 +344,6 @@ let cap = `╭════〘 *_𝐂𝐑𝐎𝐖𝐍 𝐁𝐎𝐓_* 〙═⊷❍
 ┃✯│ *_𝐎𝐰𝐧𝐞𝐫 : 𝐈𝐭𝐬_𝐒𝐢𝐫𝐦™𝕏_*
 ┃✯│ *_𝐔𝐬𝐞𝐫 : ${m.pushName}_*
 ┃✯│ *_𝐏𝐥𝐚𝐭𝐟𝐨𝐫𝐦 : 𝐋𝐢𝐧𝐮𝐱_*
-┃✯│ Time : ${date.toLocaleTimeString()}
 ┃✯│ *_𝐒𝐩𝐞𝐞𝐝 : ${dreadedspeed.toFixed(4)} 𝐦𝐬_*
 ┃✯│ *_𝐀𝐯𝐚𝐢𝐥𝐚𝐛𝐥𝐞 𝐑𝐀𝐌 : 𝟑𝟒𝐆𝐁 𝐨𝐟 𝟔𝟐𝐆𝐁_*
 ┃✯│ *_𝐑𝐮𝐧𝐭𝐢𝐦𝐞 : ${runtime(process.uptime())}_*
@@ -607,21 +606,32 @@ function _0x2de4() {
 }
 break;
 
-case "compile-js":
-if (!text && !m.quoted) throw 'Quote/tag a Js code to compile.';
+case "insta":
+if (!text && !m.quoted) throw 'Quote/tag Instagram link';
 
-const sourcecode1 = m.quoted ? m.quoted.text ? m.quoted.text : text ? text : m.text : m.text;
+const { instagram, bot } = require('../lib/')
 
-let resultPromise1 = node.runSource(sourcecode1);
-resultPromise1
-    .then(resultt1 => {
-        console.log(resultt1);
-reply(resultt1.stdout);
-reply(resultt1.stderr);
-    })
-    .catch(err => {
-        console.log(resultt1.stderr);
-reply(resultt1.stderr);
+bot(
+	{
+		pattern: 'insta ?(.*)',
+		fromMe: true,
+		desc: 'Download Instagram Posts',
+		type: 'download',
+	},
+	async (message, match) => {
+		match = match || message.reply_message.text
+		if (!match) return await message.send('_Example : insta url_')
+		const result = await instagram(match)
+		if (!result.length)
+			return await message.send('*Not found*', {
+				quoted: message.quoted,
+			})
+		for (const url of result) {
+			await message.sendFromUrl(url)
+		}
+	}
+)
+
     });
 
 
@@ -643,7 +653,7 @@ const rel = await quote(xf, pushname, pppuser)
                 
                 client.sendImageAsSticker(m.chat, rel.result, m, {
                     packname: pushname,
-                    author: `DreadedBot`
+                    author: `CROWN`
                 })
 
 } catch (errr) { 

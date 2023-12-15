@@ -115,7 +115,7 @@
     },
     "AI": {
       "description": "Put your OpenAI API key here. This will allow AI features to work correctly. This key starts with sk-",
-      "required": false
+      "required": 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
     }
   },
   "buildpacks": [

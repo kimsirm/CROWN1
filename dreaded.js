@@ -299,7 +299,7 @@ if (badwordkick === 'TRUE' && isBotAdmin && !isAdmin && body && (new RegExp('\\b
                    participant: kid 
                 } 
              }).then(() => client.groupParticipantsUpdate(m.chat, [kid], 'remove')); 
- client.sendMessage(m.chat, {text:`Adiós:\n\n@${kid.split("@")[0]}, sending group links is prohibited here!`, contextInfo:{mentionedJid:[kid]}}, {quoted:m}); 
+ client.sendMessage(m.chat, {text:`@${kid.split("@")[0]}, 𝗥𝗲𝗺𝗼𝘃𝗲𝗱 𝗯𝘆 𝐂𝐫𝐨𝐰𝐧! ,ɢ𝚛𝚘𝚞𝚙 𝚕𝚒𝚗𝚔𝚜 𝚒𝚜 𝚙𝚛𝚘𝚑𝚒𝚋𝚒𝚝𝚎𝚍 by 𝚋𝚘𝚝 𝚘𝚠𝚗𝚎𝚛!👀`, contextInfo:{mentionedJid:[kid]}}, {quoted:m}); 
        }   
 
 if (antilink === 'TRUE' && antilinkall === 'TRUE' && body.includes('http') && !Owner && isBotAdmin && !isAdmin && m.isGroup) { 
@@ -315,7 +315,7 @@ if (antilink === 'TRUE' && antilinkall === 'TRUE' && body.includes('http') && !O
                    participant: ki
                 } 
              }).then(() => client.groupParticipantsUpdate(m.chat, [ki], 'remove')); 
- client.sendMessage(m.chat, {text:`Auf wiedersehen:\n\n@${ki.split("@")[0]}, sending links is prohibited in this group!`, contextInfo:{mentionedJid:[ki]}}, {quoted:m}); 
+ client.sendMessage(m.chat, {text:`@${ki.split("@")[0]}, sending links is prohibited in this group!`, contextInfo:{mentionedJid:[ki]}}, {quoted:m}); 
        }   
   
   

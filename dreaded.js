@@ -1755,7 +1755,7 @@ break;
 
 case "alive": { 
   
- client.sendMessage(m.chat, { video: { url: 'https://i.imgur.com/IbM7XSM.mp4' }, caption: `Hello ${m.pushName}, 𝐂𝐑𝐎𝐖𝐍 is alive since  ${runtime(process.uptime())}`, fileLength: "9999999999898989899999999" }, { quoted: m }); 
+ client.sendMessage(m.chat, { video: { url: 'https://telegra.ph/file/58983db4bd25e01e2a250.mp4' }, caption: `Hello ${m.pushName}, 𝐂𝐑𝐎𝐖𝐍 is alive since  ${runtime(process.uptime())}`, fileLength: "9999999999898989899999999" }, { quoted: m }); 
  }
 break;
 case 'apk': {

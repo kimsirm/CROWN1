@@ -176,7 +176,7 @@ if (autobio === 'TRUE'){
 
                          client.updateProfileStatus( 
 
-                                         `I found peace!in debugging'})}.` 
+                                         `I found peace!in debugging` 
 
                                  ) 
 

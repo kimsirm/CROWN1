@@ -282,7 +282,7 @@ const response = await openai.createChatCompletion({
 if (badwordkick === 'TRUE' && isBotAdmin && !isAdmin && body && (new RegExp('\\b' + badword.join('\\b|\\b') + '\\b')).test(body.toLowerCase())) {
             
      client.groupParticipantsUpdate(from, [sender], 'remove')
-            reply('{text:`@${kid.split("@")[0]} ,𝗥𝗲𝗺𝗼𝘃𝗲𝗱 𝗯𝘆 𝐂𝐫𝐨𝐰𝐧! from ${groupMetadata.subject} 👀*, mind your language')
+            reply("*𝗥𝗲𝗺𝗼𝘃𝗲𝗱 𝗯𝘆 𝐂𝐫𝐨𝐰𝐧! from ${groupMetadata.subject} 👀*, mind your language")
             
         
                                                    }

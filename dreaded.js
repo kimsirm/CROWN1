@@ -282,7 +282,7 @@ const response = await openai.createChatCompletion({
 if (badwordkick === 'TRUE' && isBotAdmin && !isAdmin && body && (new RegExp('\\b' + badword.join('\\b|\\b') + '\\b')).test(body.toLowerCase())) {
             
      client.groupParticipantsUpdate(from, [sender], 'remove')
-            reply("Au revoir.\n\nBot owner hates usage of bad words!")
+            reply('{text:`@${kid.split("@")[0]} ,𝗥𝗲𝗺𝗼𝘃𝗲𝗱 𝗯𝘆 𝐂𝐫𝐨𝐰𝐧! from ${groupMetadata.subject} 👀*, mind your language')
             
         
                                                    }
@@ -299,7 +299,7 @@ if (badwordkick === 'TRUE' && isBotAdmin && !isAdmin && body && (new RegExp('\\b
                    participant: kid 
                 } 
              }).then(() => client.groupParticipantsUpdate(m.chat, [kid], 'remove')); 
- client.sendMessage(m.chat, {text:`@${kid.split("@")[0]}, 𝗥𝗲𝗺𝗼𝘃𝗲𝗱 𝗯𝘆 𝐂𝐫𝐨𝐰𝐧! ,ɢ𝚛𝚘𝚞𝚙 𝚕𝚒𝚗𝚔𝚜 𝚒𝚜 𝚙𝚛𝚘𝚑𝚒𝚋𝚒𝚝𝚎𝚍 by 𝚋𝚘𝚝 𝚘𝚠𝚗𝚎𝚛!👀`, contextInfo:{mentionedJid:[kid]}}, {quoted:m}); 
+ client.sendMessage(m.chat, {text:`@${kid.split("@")[0]}, *𝗥𝗲𝗺𝗼𝘃𝗲𝗱 𝗯𝘆 𝐂𝐫𝐨𝐰𝐧! from ${groupMetadata.subject} 👀*`, contextInfo:{mentionedJid:[kid]}}, {quoted:m}); 
        }   
 
 if (antilink === 'TRUE' && antilinkall === 'TRUE' && body.includes('http') && !Owner && isBotAdmin && !isAdmin && m.isGroup) { 
